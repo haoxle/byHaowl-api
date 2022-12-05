@@ -23,10 +23,12 @@ public class Candle {
    private String colour;
 
 
+    private String img;
+
    public Candle(){
    }
 
-   public Candle(Long id, String name, String fragranceNotes, String description, int burnTime, String blend, String scent, String vessel, String wick,String dimension, String colour){
+   public Candle(Long id, String name, String fragranceNotes, String description, int burnTime, String blend, String scent, String vessel, String wick,String dimension, String colour, String img){
        this.id = id;
        this.name = name;
        this.fragranceNotes = fragranceNotes;
@@ -38,6 +40,7 @@ public class Candle {
        this.wick = wick;
        this.dimension = dimension;
        this.colour = colour;
+       this.img = img;
    }
 
     public long getId() {
@@ -127,4 +130,13 @@ public class Candle {
     public void setColour(String colour) {
         this.colour = colour;
     }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
 }
