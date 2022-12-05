@@ -1,9 +1,6 @@
 package com.example.byhaowlapi;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Candle {
@@ -12,9 +9,11 @@ public class Candle {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private long id;
    private String name;
+    @Column(length = 2000)
    private String fragranceNotes;
+   @Column(length = 2000)
    private String description;
-   private int burnTime;
+   private String burnTime;
    private String blend;
    private String scent;
    private String vessel;
@@ -22,14 +21,16 @@ public class Candle {
    private String dimension;
    private String colour;
 
+    private Float price;
 
     private String img;
 
    public Candle(){
    }
 
-   public Candle(Long id, String name, String fragranceNotes, String description, int burnTime, String blend, String scent, String vessel, String wick,String dimension, String colour, String img){
+   public Candle(Long id, Float price, String name, String fragranceNotes, String description, String burnTime, String blend, String scent, String vessel, String wick,String dimension, String colour, String img){
        this.id = id;
+       this.price = price;
        this.name = name;
        this.fragranceNotes = fragranceNotes;
        this.description = description;
@@ -75,11 +76,11 @@ public class Candle {
         this.description = description;
     }
 
-    public int getBurnTime() {
+    public String getBurnTime() {
         return burnTime;
     }
 
-    public void setBurnTime(int burnTime) {
+    public void setBurnTime(String burnTime) {
         this.burnTime = burnTime;
     }
 
@@ -137,6 +138,13 @@ public class Candle {
 
     public void setImg(String img) {
         this.img = img;
+    }
+    public Float getPrice() {
+        return price;
+    }
+
+    public void setPrice(Float price) {
+        this.price = price;
     }
 
 }
