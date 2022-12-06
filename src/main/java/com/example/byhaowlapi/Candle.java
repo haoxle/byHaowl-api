@@ -25,10 +25,12 @@ public class Candle {
 
     private String img;
 
+
+    private int stock;
    public Candle(){
    }
 
-   public Candle(Long id, Float price, String name, String fragranceNotes, String description, String burnTime, String blend, String scent, String vessel, String wick,String dimension, String colour, String img){
+   public Candle(Long id, Float price, String name, String fragranceNotes, String description, String burnTime, String blend, String scent, String vessel, String wick,String dimension, String colour, String img, int stock){
        this.id = id;
        this.price = price;
        this.name = name;
@@ -42,6 +44,7 @@ public class Candle {
        this.dimension = dimension;
        this.colour = colour;
        this.img = img;
+       this.stock = stock;
    }
 
     public long getId() {
@@ -145,6 +148,13 @@ public class Candle {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
 }
