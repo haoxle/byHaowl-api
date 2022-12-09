@@ -8,7 +8,8 @@ The final project is a e-comerce wesite selling candles and ceramics. It also fo
 <img width="1380" alt="Screenshot 2022-12-09 at 10 20 22-min" src="https://user-images.githubusercontent.com/111334034/206687826-e15c8768-9b42-4283-9152-288f8a33843e.png">
 
 
-## Dependencoes
+## Dependencies
+
 <img width="1386" alt="Screenshot 2022-12-09 at 10 20 29-min" src="https://user-images.githubusercontent.com/111334034/206687862-5ad33f80-36ae-4aad-a928-87331ea273c6.png">
 
 Ensure that in application.properties, the local host port is coherent with mySQL.
